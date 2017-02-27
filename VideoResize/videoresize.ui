@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1501</width>
-    <height>591</height>
+    <width>679</width>
+    <height>204</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>ImageResize</string>
+   <string>VideoResize</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -56,7 +56,7 @@
     </layout>
    </item>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,1,1,1,2">
      <item>
       <widget class="QLabel" name="label_3">
        <property name="font">
@@ -132,6 +132,13 @@
       </spacer>
      </item>
     </layout>
+   </item>
+   <item>
+    <widget class="QProgressBar" name="pb_convert">
+     <property name="value">
+      <number>0</number>
+     </property>
+    </widget>
    </item>
   </layout>
  </widget>

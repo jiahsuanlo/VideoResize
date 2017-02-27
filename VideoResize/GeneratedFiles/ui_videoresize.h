@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'videoresize.ui'
 **
-** Created by: Qt User Interface Compiler version 5.6.1
+** Created by: Qt User Interface Compiler version 5.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -19,6 +19,7 @@
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
+#include <QtWidgets/QProgressBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QVBoxLayout>
@@ -46,12 +47,13 @@ public:
     QSpacerItem *horizontalSpacer;
     QPushButton *bt_start;
     QSpacerItem *horizontalSpacer_2;
+    QProgressBar *pb_convert;
 
     void setupUi(QWidget *VideoResizeClass)
     {
         if (VideoResizeClass->objectName().isEmpty())
             VideoResizeClass->setObjectName(QStringLiteral("VideoResizeClass"));
-        VideoResizeClass->resize(1501, 591);
+        VideoResizeClass->resize(679, 204);
         verticalLayout = new QVBoxLayout(VideoResizeClass);
         verticalLayout->setSpacing(6);
         verticalLayout->setContentsMargins(11, 11, 11, 11);
@@ -121,6 +123,11 @@ public:
 
         horizontalLayout_2->addWidget(ck_aspect);
 
+        horizontalLayout_2->setStretch(0, 1);
+        horizontalLayout_2->setStretch(1, 1);
+        horizontalLayout_2->setStretch(2, 1);
+        horizontalLayout_2->setStretch(3, 1);
+        horizontalLayout_2->setStretch(4, 2);
 
         verticalLayout->addLayout(horizontalLayout_2);
 
@@ -143,6 +150,12 @@ public:
 
         verticalLayout->addLayout(horizontalLayout);
 
+        pb_convert = new QProgressBar(VideoResizeClass);
+        pb_convert->setObjectName(QStringLiteral("pb_convert"));
+        pb_convert->setValue(0);
+
+        verticalLayout->addWidget(pb_convert);
+
 
         retranslateUi(VideoResizeClass);
 
@@ -151,7 +164,7 @@ public:
 
     void retranslateUi(QWidget *VideoResizeClass)
     {
-        VideoResizeClass->setWindowTitle(QApplication::translate("VideoResizeClass", "ImageResize", 0));
+        VideoResizeClass->setWindowTitle(QApplication::translate("VideoResizeClass", "VideoResize", 0));
         label->setText(QApplication::translate("VideoResizeClass", "Source Video File", 0));
         bt_src->setText(QApplication::translate("VideoResizeClass", "browse", 0));
         label_2->setText(QApplication::translate("VideoResizeClass", "Destination Video File Name", 0));
