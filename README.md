@@ -6,7 +6,10 @@ A small app to resize video files
 - Qt 5.7 
 - OpenCV 3
 
-They are currently set-up using Visual Studio property sheet and have to be re-configured either via property sheet or property pages
+They are currently set-up using Visual Studio property sheet and the installation paths have to be re-configured either via property sheet or property pages.
+
+## Installation:
+Open the solution file using Visual Studio and compile the solution.
 
 ## How to use:
 
